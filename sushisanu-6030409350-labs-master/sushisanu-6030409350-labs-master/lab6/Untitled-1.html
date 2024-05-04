@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+        <body>
+                <button type="button" onclick = "myFunction()" >Change color</button>
+        
+        </body>
+<script>
+  
+
+       var btn = document.querySelector('button');
+       btn.onclick = function myFunction(){
+        var rgbcolor;
+    one = Math.floor(Math.random() * 250 + 0);
+    two = Math.floor(Math.random() * 250 + 0);
+    three = Math.floor(Math.random() * 250 + 0);
+
+     rgbColor = 'rgb(' + one + ',' + two + ',' + three + ')';
+        document.body.style.backgroundColor = rgbColor;
+
+
+       }
+    
+     </script>
+
+
+
+
+</html>

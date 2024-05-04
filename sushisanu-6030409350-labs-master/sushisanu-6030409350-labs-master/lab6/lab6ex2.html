@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        div {
+            background-color: red;
+            height: 25vh;
+            width: 25%;
+            float: left;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+    </style>
+
+    <script>
+        for (var i = 1; i <= 16; i++) {
+            var mydiv = document.createElement('div');
+            document.body.appendChild(mydiv);
+        }
+
+        function random(number) {
+            return randomNumber = Math.floor(Math.random() * number) + 1;
+        }
+
+        function backgroundChange(rand) {
+            var rndCol
+            if ((rand + 1) % 2 == 0) {
+                rndCol = "yellow";
+            } else {
+                rndCol = "rgb(" + random(255) + ',' + random(255) + ',' + random(255) + ')';
+            }
+            return rndCol;
+        }
+        var divs = document.querySelectorAll("div");
+        for (let i = 0; i < divs.length; i++) {
+
+            divs[i].onclick = function (e) {
+                e.target.style.backgroundColor = backgroundChange(i);
+
+            }
+        }
+    </script>
+</body>
+
+</html>

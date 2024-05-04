@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<form autocomplete="on" onsubmit="return myFunction()">
+  Name(max 10 chararcters:<input type="text" name="name" id = "name"><br>
+  Age(from 1 to 100): <input type="text" name="age" id = "age"><br>
+  E-mail: <input type="text" name="email" autocomplete="off" id = "email" ><br>
+  <input type="submit" value="Submit"><br>
+</form>
+
+<script>
+
+    function myFunction(){
+        var name , age, email;
+        name = document.getElementById("name").value;
+        age = document.getElementById("age").value;
+        email  = document.getElementById("email").value;
+
+        if(name.length > 10 || name.length < 1  ) {
+            alert ("The name must at most 10 characters")
+            return false;
+        }
+        
+        if(age > 100 || age < 1 )  {
+            alert ("The age must be a number from 1 to 100")
+            return false;
+        }
+        if(email.indexOf("@") == -1 || email.indexOf("@") == 0 || email.endsWith('@')) {
+                alert("Not a valid e-mail because it does not have @")
+                return false;
+        }
+    }
+    
+
+    
+
+
+</script>
+
+
+
+</body>
+</html>

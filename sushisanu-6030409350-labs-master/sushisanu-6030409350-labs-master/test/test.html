@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel = "stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+        <div id="1"></div>
+        <div id="2"></div>
+        <div id="3"></div>
+        <div id="4"></div>
+        <div id="5"></div>
+        <div id="6"></div>
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+<script>
+var myID = 6;
+
+for (var i = 0; i < document.getElementsByTagName('div').length; i++){
+    var res = document.getElementsByTagName('div')[i+1].id;
+    if(res == myID){
+        document.body.innerHTML = res;
+        break;
+    }
+}
+</script>
+
+</body>
+</html>

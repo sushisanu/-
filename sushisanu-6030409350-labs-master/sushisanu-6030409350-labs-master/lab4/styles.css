@@ -1,0 +1,42 @@
+ul.a {list-style-type: circle;}
+ul.b {list-style-type: square;}
+ol.c {list-style-type: upper-roman;}
+ol.d {list-style-type: lower-alpha;}
+
+.ice2 {
+    border: 5px solid blue;
+    padding: 5px;
+    width: 220px;
+    background-color: lightblue;
+}
+
+.ice {
+    border: 5px solid green;
+    padding: 5px;
+    width: 220px;
+    background-color: lightgreen;
+}
+
+.top ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+.top li {
+    float: left;
+  }
+  
+.top li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+.top li a:hover {
+    background-color:pink;
+  }

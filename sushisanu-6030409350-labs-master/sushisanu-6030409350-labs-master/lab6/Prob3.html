@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .piclogo {
+            width: 50vh;
+            height: 50vh;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+
+        .textInput {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .divStyle {
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+
+
+
+        .submitStyle {
+            width: 100%;
+            background-color: royalblue;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+    <img class="piclogo" src="nature.png">
+    <form>
+        <div class="divStyle">
+            <label class="fnameSty" for="fname">First name :</label>
+            <br><input class="textInput" type="text" id="fname" />
+
+            <br><label for="lname">Last name :</label>
+            <br><input class="textInput" type="text" id="lname" />
+
+            <input class="submitStyle" type="submit" id="submit">
+        </div>
+
+
+    </form>
+    <p></p>
+    <script>
+        var form = document.querySelector('form');
+        var fname = document.getElementById('fname');
+        var lname = document.getElementById('lname');
+        var submit = document.getElementById('submit');
+        var para = document.querySelector('p');
+        form.onsubmit = function (e) {
+            e.preventDefault();
+            if (fname.value === '' || lname.value === '') {
+                para.style.color = "red";
+                para.textContent = "You need to fill both names!";
+
+            } 
+        }
+    </script>
+
+</body>
+
+</html>
